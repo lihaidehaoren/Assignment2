@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class LargeNumberAddition2 {
+    public static void main(String[] args){
+        Scanner sc =new Scanner(System.in);
+        Scanner input =new Scanner(System.in);
+        int n;
+        n=input.nextInt();
+
+        while (n>0) {
+            int q,p;
+            q=input.nextInt();
+            p=input.nextInt();
+
+            String A = sc.next();     //输入数组A的数值 长度为p
+            String[] a = A.split(" ");
+            String arr1 =new String();
+            for (int i=0;i<a.length;i++){
+                arr1=(arr1+a[i]);
+            }
+
+            String B = sc.next();     //输入数组B的数值 长度为q
+            String[] b = B.split(" ");
+            String arr2 =new String();
+            for (int i=0;i<b.length;i++){
+                arr2=(arr2+b[i]);
+            }
+
+            String add =addStrings(arr1,arr2);
+            System.out.println(add);
+            n=n-1;
+        }
+    }
+
+
+
+    public static String addStrings(String arr1,String arr2){
+        int m=arr1.length()-1;
+        int n=arr2.length()-1;
+        int counter=0;
+        StringBuffer as =new StringBuffer();
+        while (m>=0||n>=0||counter!=0){
+            int x = m >=0?arr1.charAt(m)-'0':0;
+            int y = n >=0?arr2.charAt(n)-'0':0;
+            int res =x+y+counter;
+            as.append(res%10);
+            counter=res/10;
+            m--;
+            n--;
+        }
+        as.reverse();
+        return as.toString();
+    }
+}
+
