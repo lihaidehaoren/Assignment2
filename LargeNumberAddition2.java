@@ -8,18 +8,24 @@ public class LargeNumberAddition2 {
         n=input.nextInt();
 
         while (n>0) {
-            int q,p;
-            q=input.nextInt();
-            p=input.nextInt();
+            String D = sc.nextLine();
+            String[] arr3 = D.split(" ");
+            int[] d = new int[arr3.length];
+            for (int i = 0; i < d.length; i++) {
+                d[i] = Integer.parseInt(arr3[i]);
+            }
+            int p,q;
+            p=d[0];
+            q=d[1];
 
-            String A = sc.next();     //输入数组A的数值 长度为p
+            String A = sc.nextLine();     //输入数组A的数值 长度为p
             String[] a = A.split(" ");
             String arr1 =new String();
             for (int i=0;i<a.length;i++){
                 arr1=(arr1+a[i]);
             }
 
-            String B = sc.next();     //输入数组B的数值 长度为q
+            String B = sc.nextLine();     //输入数组B的数值 长度为q
             String[] b = B.split(" ");
             String arr2 =new String();
             for (int i=0;i<b.length;i++){
