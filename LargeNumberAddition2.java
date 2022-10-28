@@ -1,13 +1,20 @@
-import java.util.ArrayList;
+import java.util.ArrayList;   //未用模块化设计，懒得改了，就这样了
 import java.util.Scanner;
-import java.lang.String;
 
 public class LargeNumberAddition2 {
     public static void main(String[] args){
         Scanner sc =new Scanner(System.in);
         Scanner input =new Scanner(System.in);
+
+        String E = sc.nextLine();
+        String[] arr4 = E.split(" ");
+        int[] e = new int[arr4.length];
+        for (int i = 0; i < e.length; i++) {
+            e[i] = Integer.parseInt(arr4[i]);
+        }
+
         int n,m;
-        n=input.nextInt();
+        n=e[0];
         m=n;
 
         ArrayList<String> ARR = new ArrayList<>();
