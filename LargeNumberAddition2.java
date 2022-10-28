@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.lang.String;
 
 public class LargeNumberAddition2 {
     public static void main(String[] args){
