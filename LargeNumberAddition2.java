@@ -1,11 +1,15 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LargeNumberAddition2 {
     public static void main(String[] args){
         Scanner sc =new Scanner(System.in);
         Scanner input =new Scanner(System.in);
-        int n;
+        int n,m;
         n=input.nextInt();
+        m=n;
+
+        ArrayList<String> ARR = new ArrayList<>();
 
         while (n>0) {
             String D = sc.nextLine();
@@ -33,8 +37,11 @@ public class LargeNumberAddition2 {
             }
 
             String add =addStrings(arr1,arr2);
-            System.out.println(add);
+            ARR.add(add);
             n=n-1;
+        }
+        for (int i=0;i<m;i++){
+        System.out.println(ARR.get(i));
         }
     }
 
