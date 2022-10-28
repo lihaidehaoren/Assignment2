@@ -4,6 +4,7 @@ public class EnglishExamPreparation {
     public static void main(String[] args){
 
         Scanner sc =new Scanner(System.in);
+
         String D = sc.nextLine();
         String[] arr3 = D.split(" ");
         int[] d = new int[arr3.length];
