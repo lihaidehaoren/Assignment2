@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Scanner;                 //此为测试版本，正式版本请移步至LargeNumberAddition2
 
 public class LargeNumberAddition {
     public static void main(String[] args){
